@@ -31,11 +31,11 @@ static NSString * const ShowLoginSegueIdentifier = @"showLoginSegueIdentifier";
     [SVProgressHUD show];
     [self.tableView registerNib:[UINib nibWithNibName:@"ProfileCell" bundle:nil] forCellReuseIdentifier:kProfileCell];
     
-    UIRefreshControl *refreshControl = [UIRefreshControl new];
-    [refreshControl addTarget:self action:@selector(refreshData:) forControlEvents:UIControlEventValueChanged];
-    [self.tableView addSubview:refreshControl];
-    [self.view sendSubviewToBack:refreshControl];
-    [self refreshData:refreshControl];
+//    UIRefreshControl *refreshControl = [UIRefreshControl new];
+//    [refreshControl addTarget:self action:@selector(refreshData:) forControlEvents:UIControlEventValueChanged];
+//    [self.tableView addSubview:refreshControl];
+//    [self.view sendSubviewToBack:refreshControl];
+    [self refreshData:nil];
 }
 
 - (void)didReceiveMemoryWarning {
