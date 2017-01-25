@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GOTHAM-LIGHT.TTF">
+            <string>GothamLight</string>
+        </array>
+        <array key="GOTHAM-MEDIUM.TTF">
+            <string>GothamMedium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewControllerIdentifier" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="lLq-CZ-ggQ">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="lLq-CZ-ggQ" secondAttribute="height" multiplier="1:1" id="axZ-4q-u37"/>
+                                    <constraint firstAttribute="width" constant="120" id="wmJ-58-Gwz"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook-button" translatesAutoresizingMaskIntoConstraints="NO" id="1Gl-iV-6GU">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="298" id="9AI-ZL-TlV"/>
+                                    <constraint firstAttribute="height" constant="59" id="smY-e3-W7Y"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tc8-J2-Vbb">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="298" id="P2A-h6-EVg"/>
+                                    <constraint firstAttribute="height" constant="59" id="r6L-u3-zAY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GothamMedium" family="Gotham Medium" pointSize="15"/>
+                                <state key="normal" title="LOGIN WITH FACEBOOK"/>
+                                <connections>
+                                    <action selector="didPressSocialLoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SsN-nn-IbY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By continuing, you agree to our" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LtI-md-Zbg">
+                                <fontDescription key="fontDescription" name="GothamLight" family="Gotham Light" pointSize="12"/>
+                                <color key="textColor" red="0.58039215690000001" green="0.58039215690000001" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OkL-rC-Mlr">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="WbE-AM-IAs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GothamMedium" family="Gotham Medium" pointSize="12"/>
+                                <state key="normal" title="Terms of Service">
+                                    <color key="titleColor" red="0.58039215690000001" green="0.58039215690000001" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We won't post anything without your permission" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MkD-eT-uBU">
+                                <fontDescription key="fontDescription" name="GothamLight" family="Gotham Light" pointSize="11"/>
+                                <color key="textColor" red="0.58039215690000001" green="0.58039215690000001" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196078430000004" green="0.92941176469999998" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1Gl-iV-6GU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3rk-vR-shA"/>
+                            <constraint firstItem="OkL-rC-Mlr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5m8-7o-nYe"/>
+                            <constraint firstItem="MkD-eT-uBU" firstAttribute="centerX" secondItem="1Gl-iV-6GU" secondAttribute="centerX" id="78A-kk-ANr"/>
+                            <constraint firstItem="MkD-eT-uBU" firstAttribute="top" secondItem="Tc8-J2-Vbb" secondAttribute="bottom" constant="8" id="8Fl-dN-YfI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OkL-rC-Mlr" secondAttribute="bottom" constant="20" id="HpK-k3-uTK"/>
+                            <constraint firstItem="OkL-rC-Mlr" firstAttribute="top" secondItem="LtI-md-Zbg" secondAttribute="bottom" constant="1" id="MzM-gD-P1L"/>
+                            <constraint firstItem="1Gl-iV-6GU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eAu-A8-t2c"/>
+                            <constraint firstItem="lLq-CZ-ggQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="gBU-9Z-mEM"/>
+                            <constraint firstItem="lLq-CZ-ggQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iF1-Mf-ABP"/>
+                            <constraint firstItem="Tc8-J2-Vbb" firstAttribute="centerY" secondItem="1Gl-iV-6GU" secondAttribute="centerY" id="itT-6q-ZHY"/>
+                            <constraint firstItem="Tc8-J2-Vbb" firstAttribute="centerX" secondItem="1Gl-iV-6GU" secondAttribute="centerX" constant="17" id="jdN-fG-8tV"/>
+                            <constraint firstItem="OkL-rC-Mlr" firstAttribute="centerX" secondItem="LtI-md-Zbg" secondAttribute="centerX" id="xxJ-cH-0OV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="aaq-Cw-xhq"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <segue destination="htj-sC-CWA" kind="show" identifier="loginSegueIdentifier" id="Spg-9T-qr1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="833" y="38"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="xrJ-JV-vVj">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OwG-ce-fD0" customClass="MainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="o2J-Ay-DH9"/>
+                        <viewControllerLayoutGuide type="bottom" id="zma-n4-8Px"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EYt-dq-pUQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2e8-T2-wYb">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="profileCell" id="a3G-yg-DdE" customClass="ProfileCell">
+                                        <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a3G-yg-DdE" id="Dm3-yu-6Me">
+                                            <frame key="frameInset" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="OwG-ce-fD0" id="WuY-xU-d9D"/>
+                                    <outlet property="delegate" destination="OwG-ce-fD0" id="cDb-ry-lXk"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2e8-T2-wYb" firstAttribute="centerX" secondItem="EYt-dq-pUQ" secondAttribute="centerX" id="Ddv-gg-iP4"/>
+                            <constraint firstItem="2e8-T2-wYb" firstAttribute="top" secondItem="o2J-Ay-DH9" secondAttribute="bottom" id="KlV-8D-Za7"/>
+                            <constraint firstItem="2e8-T2-wYb" firstAttribute="width" secondItem="EYt-dq-pUQ" secondAttribute="width" id="QKn-u5-hxb"/>
+                            <constraint firstItem="zma-n4-8Px" firstAttribute="top" secondItem="2e8-T2-wYb" secondAttribute="bottom" id="vbW-jq-Vet"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Profile" id="0V5-bS-j9v">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="evw-td-7lS">
+                            <connections>
+                                <action selector="didPressLogOutButton:" destination="OwG-ce-fD0" id="rwS-sk-Orc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="2e8-T2-wYb" id="DtA-Dj-mfL"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="showLoginSegueIdentifier" id="ywP-eC-GmH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fFx-jV-2dA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2584.8000000000002" y="36.431784107946029"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ysb-dK-jRs">
+            <objects>
+                <navigationController storyboardIdentifier="MainNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="htj-sC-CWA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Du-un-qh4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OwG-ce-fD0" kind="relationship" relationship="rootViewController" id="kC5-Vf-i4O"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MQw-sp-QzT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1645.5999999999999" y="36.431784107946029"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="facebook-button" width="298" height="59"/>
+        <image name="logo" width="66" height="62"/>
+    </resources>
+</document>
