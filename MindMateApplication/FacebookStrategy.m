@@ -28,7 +28,6 @@
                 NSLog(@"Facebook login was cancelled.");
                 completion([MMErrorManager errorForErrorIdentifier:MMErrorSocialLoginEventCancelled]);
             } else {
-//                [SVProgressHUD show];
                 if (result.declinedPermissions.count == 0) { //everything went well, user accepted all the permissions
                     completion(nil);
                 } else { //user denied one or more permissions

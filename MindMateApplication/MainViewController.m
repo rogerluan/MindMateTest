@@ -38,10 +38,6 @@ static NSString * const ShowLoginSegueIdentifier = @"showLoginSegueIdentifier";
     [self refreshData:nil];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
 - (void)refreshData:(UIRefreshControl *)refreshControl {
     [[FacebookManager sharedManager] fetchUserInfo:^(NSDictionary * _Nullable info, NSError * _Nullable error) {
         [SVProgressHUD dismiss];
@@ -76,8 +72,6 @@ static NSString * const ShowLoginSegueIdentifier = @"showLoginSegueIdentifier";
     [[LoginManager sharedManager] logoutWithCompletionBlock:^(NSError * _Nullable error) {
         if (!error) {
             [self performSegueWithIdentifier:ShowLoginSegueIdentifier sender:self];
-//            LoginViewController *loginVC = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:LoginViewControllerIdentifier];
-//            [self.navigationController showViewController:loginVC sender:self];
         } else {
             [self presentViewController:[MMErrorManager alertFromError:error] animated:YES completion:nil];
         }

@@ -13,10 +13,6 @@ static NSString * const LoginSegueIdentifier = @"loginSegueIdentifier";
 
 @implementation LoginViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-
 - (IBAction)didPressSocialLoginButton:(UIButton *)sender {
     MMLoginType loginStrategy = (MMLoginType)sender.tag;
     [[LoginManager sharedManager] setStrategy:loginStrategy];
@@ -24,7 +20,11 @@ static NSString * const LoginSegueIdentifier = @"loginSegueIdentifier";
         if (!error) {
             [self performSegueWithIdentifier:LoginSegueIdentifier sender:self];
         } else {
-            [self presentViewController:[MMErrorManager alertFromError:error] animated:YES completion:nil];
+            if ([error.domain isEqualToString:[NSBundle mainBundle].bundleIdentifier] && error.code == MMErrorSocialLoginEventCancelled) {
+                NSLog(@"User cancelled the login. The app shouldn't do anything.");
+            } else {
+                [self presentViewController:[MMErrorManager alertFromError:error] animated:YES completion:nil];
+            }
         }
     }];
 }
