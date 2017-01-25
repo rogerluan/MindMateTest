@@ -22,7 +22,6 @@ This project features:
  - Storyboard and Xibs
  - Localization
  - Universal App
- - Pull To Refresh feature
 
 ## Contact
 
